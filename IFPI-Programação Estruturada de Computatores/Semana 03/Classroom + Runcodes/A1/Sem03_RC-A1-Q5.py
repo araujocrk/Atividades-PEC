@@ -1,0 +1,5 @@
+lua = int(input().strip())
+dragao = int(input().strip())
+fenix = int(input().strip())
+pocao = (lua * 5) + (dragao * 3) + (fenix * 8)
+print(pocao)
