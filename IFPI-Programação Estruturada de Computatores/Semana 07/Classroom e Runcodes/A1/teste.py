@@ -1,8 +1,0 @@
-n1 = input('Digite um número: ')
-n2 = input('Digite outro número: ')
-n1_int = int(n1)
-n2_int = int(n2)
-n1_float = float(n1)
-n2_float = float(n2)
-print(n1_float)
-print(n2_float)
