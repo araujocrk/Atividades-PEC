@@ -1,5 +1,5 @@
 def main():
-    for num in range(0, 1001, 10):
+    for num in range(10, 1001, 10):
         if num != 1000:
             print(num, end=', ')
         else:
