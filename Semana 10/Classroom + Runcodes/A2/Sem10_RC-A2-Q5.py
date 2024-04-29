@@ -1,6 +1,6 @@
-def parcelas(i, f, m):
+def parcelas(i, f, v):
     for p in range(i, f):
-        print(f'{p}x de R$ {m / p:.2f}')
+        print(f'{p}x de R$ {v / p:.2f}')
 
 def main():
     preco = float(input().strip())
