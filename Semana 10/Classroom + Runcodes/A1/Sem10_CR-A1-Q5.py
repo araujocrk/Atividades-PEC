@@ -8,7 +8,7 @@ def maior(qtd):
     return maior
 
 def main():
-    qtd = 10
+    qtd = 100
     
     resultado = maior(qtd)
     
