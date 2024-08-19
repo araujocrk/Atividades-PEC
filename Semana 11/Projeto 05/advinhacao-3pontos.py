@@ -1,6 +1,8 @@
 from random import *
 
+tentativas = 0
 score = 0
+
 print('''
     Porta da Fortuna!
     ===========
@@ -15,9 +17,12 @@ print('''
        |_____|   |_____|   |_____|
       ''')
 
-for attempt in range(3):
+
+while score < 3:
     
-    print('\nEscolha uma porta (1, 2 ou 3):')
+    tentativas += 1
+    
+    print(f'\nTentativa {tentativas}: Escolha uma porta (1, 2 ou 3):')
 
     portaEscolhida = input()
     portaEscolhida = int(portaEscolhida)
@@ -34,4 +39,7 @@ for attempt in range(3):
     else:
         print(f'Que peninha!')
         
-print(f'Você acertou a porta {score} vezes')
+        
+    print(f'Sua pontuação atual é {score}.')
+    
+print(f'Você conseguiu! Terminou o jogo em {tentativas} tentativas')

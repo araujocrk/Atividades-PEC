@@ -1,6 +1,8 @@
 from random import *
 
+jogando = True
 score = 0
+
 print('''
     Porta da Fortuna!
     ===========
@@ -15,7 +17,8 @@ print('''
        |_____|   |_____|   |_____|
       ''')
 
-for attempt in range(3):
+
+while jogando == True:
     
     print('\nEscolha uma porta (1, 2 ou 3):')
 
@@ -33,5 +36,14 @@ for attempt in range(3):
         score += 1
     else:
         print(f'Que peninha!')
+        score = 0
         
-print(f'Você acertou a porta {score} vezes')
+    print(f'Sua pontuação é {score}.')
+    
+    resposta = input(f'Você quer jogar de novo? (s/n)\n').lower()[0]
+    
+    if resposta == 'n':
+        jogando = False
+
+print(f'Obrigado por jogar.')
+print(f'Sua pontuação final foi {score}.')
