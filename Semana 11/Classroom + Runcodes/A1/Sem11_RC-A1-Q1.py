@@ -8,7 +8,7 @@ def rendimento_ao_ano(i,t):
         
 def main():
     inicial = float(input().strip())
-    taxa = int(input().strip())
+    taxa = float(input().strip())
     
     resultado = rendimento_ao_ano(inicial, taxa)
     
