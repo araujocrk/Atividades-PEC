@@ -1,20 +1,14 @@
-
-
 def main():
    
    ano = 1600
-   morreram = 0
-   nasceram = 0
    pop_aves = int(input('Digite qual era a população de aves no início de 1600: '))
+   pop_10 = pop_aves * 0.1
    
-   while pop_aves > pop_aves * 0.1:
-       morreram = round(pop_aves * 0.06)
-       print(f'Morreram {morreram} aves')
-       pop_aves -= morreram 
-       nasceram = round(pop_aves * 0.01)
-       print(f'Nasceram {nasceram} aves')
-       pop_aves += (nasceram)
-       print(f'Total da população de aves foi {pop_aves}')
+   while pop_aves > pop_10:
+       nasceram = pop_aves * 0.01
+       morreram = pop_aves * 0.06
+       pop_aves = pop_aves - morreram + nasceram
+       print(f'No ano de {ano}: Nasceram {nasceram:.0f}, morreram{morreram:.0f} e ao final sobrou {pop_aves:.0f} pássaros.')
        ano += 1
        
 if __name__ == "__main__":
