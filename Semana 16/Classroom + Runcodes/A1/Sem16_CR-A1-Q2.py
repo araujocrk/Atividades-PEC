@@ -10,23 +10,11 @@ def preencherTemperaturas(qtd):
 
 #função que converte C para K
 def celsiusToKelvin(celsius):
-    return celsius + 273.15
+    return round(celsius + 273.15, 2)
 
 #função que converte F para K
 def fahrenheitToKelvin(fahrenheit):
-    return (fahrenheit - 32) * (5/9) + 273.15
-
-#função para calcular a média anual em K
-def mediaAnual(temperaturas):
-    soma = 0
-    for g, e in temperaturas:
-        if e == 'C':
-            soma += celsiusToKelvin(g)
-        elif e == 'F':
-            soma += fahrenheitToKelvin(g)
-        else:
-            soma += g
-    return round(soma / len(temperaturas), 2)
+    return round((fahrenheit - 32) * (5/9) + 273.15, 2)
 
 #função que cria uma lista com as temperaturas em K
 def temperaturasKelvin(temperaturas):
@@ -39,6 +27,13 @@ def temperaturasKelvin(temperaturas):
         else:
             tempKelvin.append(g)
     return tempKelvin
+
+#função para calcular a média anual em K
+def mediaAnual(tempKelvin):
+    soma = 0
+    for e in tempKelvin:
+        soma += e
+    return round(soma / len(tempKelvin), 2)
 
 #função para informar os valores que são maiores que a média anual
 def acimaMediaAnual(tempKelvin, media):

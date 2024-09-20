@@ -9,11 +9,11 @@ def preencherTemperaturas(qtd):
 
 #função que converte C para K
 def celsiusToKelvin(celsius):
-    return celsius + 273.15
+    return round(celsius + 273.15, 2)
 
 #função que converte F para K
 def fahrenheitToKelvin(fahrenheit):
-    return (fahrenheit - 32) * (5/9) + 273.15
+    return round((fahrenheit - 32) * (5/9) + 273.15, 2)
 
 #função que cria uma lista com as temperaturas em K
 def temperaturasKelvin(temperaturas):
